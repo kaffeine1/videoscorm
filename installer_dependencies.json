@@ -1,0 +1,15 @@
+{
+  "python": {
+    "version": "3.13.15",
+    "build": "20260929",
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260929/cpython-3.13.15%2B20260929-x86_64-pc-windows-msvc-install_only.tar.gz",
+    "sha256": "26877c51b0aa91066f9d76291c324c6037b2ad8c40a1f85f51801b6c9ff0789c",
+    "filename": "python-3.13.15-windows-x64.tar.gz"
+  },
+  "ffprobe": {
+    "version": "9.0.2",
+    "url": "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-9.0.2-essentials_build.zip",
+    "sha256": "60f467265b1e312373dbcd92200c2618a74850f98d3d078e94296bb3fa2047ba",
+    "filename": "ffmpeg-9.0.2-windows-x64.zip"
+  }
+}

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Videolezione</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="player.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><h1 id="title">Videolezione</h1><span id="coverage" aria-live="polite">0% visto</span></header>
+    <video id="video" preload="metadata" playsinline src="video.mp4" disablepictureinpicture></video>
+    <p id="state" role="status" aria-live="polite">Connessione alla piattaforma...</p>
+  </main>
+</body>
+</html>

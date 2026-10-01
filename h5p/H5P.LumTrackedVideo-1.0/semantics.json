@@ -1,0 +1,8 @@
+[
+  {"name": "lessonTitle", "type": "text", "label": "Titolo della lezione", "maxLength": 200},
+  {"name": "video", "type": "video", "label": "Video MP4"},
+  {"name": "duration", "type": "number", "label": "Durata in secondi", "min": 1, "decimals": 6},
+  {"name": "checkpointSeconds", "type": "select", "label": "Salvataggio in secondi", "default": "30",
+   "options": [{"value": "15", "label": "15"}, {"value": "30", "label": "30"}, {"value": "60", "label": "60"}]},
+  {"name": "resume", "type": "boolean", "label": "Ripresa automatica", "default": true}
+]

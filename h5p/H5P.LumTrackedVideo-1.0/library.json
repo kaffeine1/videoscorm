@@ -1,0 +1,16 @@
+{
+  "title": "Video tracciato LUM",
+  "description": "Video lecture with full-playback coverage and unscored xAPI completion.",
+  "machineName": "H5P.LumTrackedVideo",
+  "author": "Michele Dipace",
+  "license": "cr",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 1,
+  "embedTypes": ["iframe"],
+  "coreApi": {"majorVersion": 1, "minorVersion": 27},
+  "preloadedJs": [{"path": "tracked-video.js"}],
+  "preloadedCss": [{"path": "tracked-video.css"}],
+  "preloadedDependencies": [{"machineName": "H5P.Video", "majorVersion": 1, "minorVersion": 6}]
+}
