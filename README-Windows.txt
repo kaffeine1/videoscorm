@@ -1,77 +1,42 @@
-Video SCORM / H5P 0.3.0 - Windows 10/11 a 64 bit
+VideoSCORM 0.3.0 - Windows 10/11 x64
+Italian instructions: README-Windows.it.txt
 
-INSTALLAZIONE
-VideoSCORM-0.3.0-Windows.zip contiene l'installer del programma.
-Non caricarlo in Moodle: non è una lezione.
-Estrai prima questo archivio sul computer Windows.
-Apri VideoSCORM-0.3.0-Setup-x64.exe e segui la procedura.
-Python e ffprobe sono inclusi. Non occorre installarli separatamente.
-Al termine viene eseguita una prova locale di funzionamento.
-Il programma è disponibile sul desktop e nel menu Start come "Video SCORM".
-Se hai già installato la versione precedente, il nuovo Setup la aggiorna.
-I tuoi MP4 originali e i pacchetti salvati fuori dalla cartella del programma
-non vengono modificati dall'aggiornamento.
+INSTALL
+Build the installer as described in README.md; installers are not in this repo.
+Extract VideoSCORM-0.3.0-Windows.zip and run VideoSCORM-0.3.0-Setup-x64.exe.
+Python and ffprobe are included. Launch "Video SCORM" from the desktop or Start.
+The interface and installer messages are currently in Italian.
+Setup updates an existing installation without changing source videos or
+packages saved outside the application folder.
+Do not upload the Windows installer archive to Moodle: it is not a lesson.
 
-PRIMA PROVA
-1. Apri Video SCORM.
-2. Scegli SCORM 1.2 oppure H5P, poi seleziona un video MP4.
-   Un piccolo video di prova è nella cartella di installazione, in app\sample.mp4.
-3. Controlla il titolo proposto e modificalo se necessario.
-4. Scegli dove salvare il pacchetto e premi Crea pacchetto.
-5. Carica solo il pacchetto generato: lezione_scorm.zip usando
-   Aggiungi attività > Pacchetto SCORM, oppure lezione_h5p.h5p usando
-   Aggiungi attività > H5P. Per il primo import H5P serve un amministratore
-   autorizzato a installare la libreria personalizzata inclusa nel pacchetto.
+CREATE A LESSON
+1. Choose SCORM 1.2 or H5P and select an MP4 video (H.264/yuv420p, AAC or no audio).
+   A sample video is available at app\sample.mp4 in the installation folder.
+2. Review the suggested title and choose the output file.
+3. Click "Crea pacchetto" to create the lesson.
+4. Upload the lesson ZIP to a Moodle SCORM activity, or the .h5p file to H5P.
+   Test in a separate course before production use.
 
-CREAZIONE MASSIVA DA CARTELLA
-1. Scegli il formato, apri la scheda Cartella e seleziona la cartella MP4.
-2. Scegli la cartella di destinazione dei pacchetti.
-   La destinazione proposta è la sottocartella Pacchetti dei video.
-3. Se vuoi, abilita Includi sottocartelle. La struttura viene mantenuta
-   nella destinazione per distinguere video con lo stesso nome.
-4. Premi Leggi cartella per controllare i titoli proposti e gli errori.
-   Seleziona una riga e premi Modifica titolo per correggerlo.
-5. Premi Crea tutti. Puoi anche premere direttamente Crea tutti senza
-   lettura preliminare: i titoli verranno ricavati automaticamente.
-6. Al termine trovi un pacchetto indipendente per ogni MP4 e un report CSV,
-   apribile in Excel, con il risultato di ciascun video.
+BATCH MODE
+Open "Cartella", choose the MP4 folder and output folder, then click "Crea tutti".
+Use "Leggi cartella" to review titles first, and "Modifica titolo" to edit them.
+"Includi sottocartelle" preserves the folder structure.
+Existing packages are skipped unless replacement is explicitly confirmed.
+"Interrompi" finishes the current file and stops. A CSV report records results.
 
-I pacchetti già esistenti vengono saltati. Sostituisci pacchetti esistenti richiede
-una conferma prima della creazione. Un video non valido viene segnalato
-nel report e non blocca i successivi. Interrompi termina il file in corso
-e lascia intatti i pacchetti già creati; gli altri risultano non elaborati.
-I collegamenti simbolici non vengono seguiti.
-Per Moodle carica i singoli pacchetti lezione, non la cartella o il report.
+TRACKING
+Completion requires full playback coverage; seeking does not count as viewing.
+Progress and position are saved, but abrupt closure or network loss can lose
+recent progress. Video playback does not assign a quiz grade.
+For SCORM, require the completed status rather than simply opening the activity.
+H5P imports include a custom library and need permission to install libraries.
+Enable H5P content-state saving. H5P attempt completion alone does not complete
+the Moodle activity or unlock prerequisites; configure those rules separately.
+Full Windows installer and Moodle H5P workflow testing is still pending.
+The program does not migrate existing lessons or learner progress.
 
-Esporta i tuoi video in MP4 H.264, pixel format yuv420p, audio AAC.
-Il titolo viene dai metadati del file o dal nome del file.
-Il completamento è basato sulle porzioni riprodotte, con navigazione libera.
-Il player conserva la posizione senza mostrare una finestra Resume.
-La versione 0.2.1 conta anche la riproduzione effettiva in background e
-corregge la perdita del primo secondo quando l'evento di avvio è ritardato.
-Una pausa o un salto con il cursore non contano come riproduzione.
-
-La generazione del pacchetto è locale. Per verificare il tracciamento, carica il
-pacchetto in un corso Moodle di prova e controlla il report del tentativo.
-
-H5P: VERIFICHE IMPORTANTI
-Il nuovo tipo H5P.LumTrackedVideo usa il player ufficiale H5P.Video 1.6.66.
-Il completamento richiede la copertura temporale completa, non un salto
-con il cursore alla fine. Non viene assegnato un voto al video.
-Abilita il salvataggio dello stato del contenuto nelle impostazioni H5P.
-Il salvataggio è asincrono: evitare di chiudere il browser bruscamente.
-L'evento finale completed compare nei report H5P; non dimostra da solo
-il completamento dell'attività Moodle o lo sblocco del modulo successivo.
-Queste regole richiedono una configurazione o integrazione separata.
-Reinvia completamento è un recupero manuale e può aggiungere un tentativo.
-Il pacchetto è validato con il core H5P 1.27 della Moodle operativa;
-la prova completa con discente e prerequisiti Moodle resta da eseguire.
-Il programma non migra lezioni o progressi esistenti e non installa nulla
-sulle piattaforme senza un import eseguito da un amministratore.
-
-DISINSTALLAZIONE E DIAGNOSTICA
-La disinstallazione è disponibile nelle impostazioni delle app di Windows.
-I video originali e i pacchetti salvati nelle tue cartelle vengono conservati.
-I log sono in %LOCALAPPDATA%\VideoSCORM\logs.
-Il test di installazione è registrato in installation.log; gli errori di avvio
-del programma sono registrati in app.log.
+DIAGNOSTICS
+Logs: %LOCALAPPDATA%\VideoSCORM\logs\installation.log and app.log.
+Uninstall through Windows app settings. Videos and packages stored outside the
+application folder are preserved.
