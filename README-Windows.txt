@@ -2,7 +2,9 @@ VideoSCORM 0.3.0 - Windows 10/11 x64
 Italian instructions: README-Windows.it.txt
 
 INSTALL
-Build the installer as described in README.md; installers are not in this repo.
+Download the installer from:
+https://github.com/kaffeine1/videoscorm/releases/tag/v0.3.0
+For a local build, follow README.md.
 Extract VideoSCORM-0.3.0-Windows.zip and run VideoSCORM-0.3.0-Setup-x64.exe.
 Python and ffprobe are included. Launch "Video SCORM" from the desktop or Start.
 The interface and installer messages are currently in Italian.

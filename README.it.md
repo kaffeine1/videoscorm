@@ -2,6 +2,8 @@
 
 [English](README.md) | [Istruzioni Windows](README-Windows.it.txt)
 
+Windows 10/11 x64: [scarica l'installer](https://github.com/kaffeine1/videoscorm/releases/tag/v0.3.0).
+
 Generatore locale per nuove videolezioni: esporta un MP4 con un editor qualsiasi e scegli tra uno ZIP SCORM 1.2 a SCO singolo e un pacchetto H5P tracciato. Entrambi i formati sono disponibili per singoli video e intere cartelle. Non sostituisce lezioni già pubblicate e non migra progressi preesistenti.
 
 Il repository contiene sorgenti, test, istruzioni di build e le librerie H5P incluse. Installer, video, pacchetti generati, note di interventi in produzione e dati utente restano fuori dal controllo versione. La cartella `dist` viene creata dal build locale.
@@ -100,6 +102,6 @@ Riferimenti: [specifica dei pacchetti H5P](https://h5p.org/documentation/develop
 
 ## Test locali
 
-`python -m unittest test_builder.py test_batch.py test_h5p.py`, `node test_player.cjs` e `node test_h5p_player.cjs`. La suite massiva include una prova con MP4 reali quando `ffprobe` e il campione del build sono disponibili. I test dell'interfaccia richiedono Tk e un desktop funzionante e si abilitano esplicitamente con `VIDEOSCORM_GUI_TESTS=1 python -m unittest test_gui.py` (su PowerShell impostare prima `$env:VIDEOSCORM_GUI_TESTS='1'`). La prova browser opzionale `node test_h5p_browser.cjs` richiede il core H5P 1.27 e Playwright nell'area QA ignorata dal build. Questi test non sostituiscono il collaudo Windows o Moodle.
+`python -m unittest test_builder.py test_batch.py test_h5p.py test_installer.py`, `node test_player.cjs` e `node test_h5p_player.cjs`. La suite massiva include una prova con MP4 reali quando `ffprobe` e il campione del build sono disponibili. I test dell'interfaccia richiedono Tk e un desktop funzionante e si abilitano esplicitamente con `VIDEOSCORM_GUI_TESTS=1 python -m unittest test_gui.py` (su PowerShell impostare prima `$env:VIDEOSCORM_GUI_TESTS='1'`). La prova browser opzionale `node test_h5p_browser.cjs` richiede il core H5P 1.27 e Playwright nell'area QA ignorata dal build. Questi test non sostituiscono il collaudo Windows o Moodle.
 
 Le note operative dei singoli interventi in produzione vengono conservate localmente, fuori dal repository. Non fanno parte del programma né autorizzano modifiche alle piattaforme.

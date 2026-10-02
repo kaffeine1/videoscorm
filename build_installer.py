@@ -16,7 +16,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parent
 VERSION = "0.3.0"
 APP_FILES = ("builder.py", "batch.py", "gui.py", "launch.pyw", "selfcheck.py", "index.html",
-             "player.js", "style.css", "README-Windows.txt")
+             "player.js", "style.css", "README-Windows.txt", "README-Windows.it.txt")
 
 
 def digest(path: Path) -> str:
@@ -124,7 +124,8 @@ def main() -> int:
     with zipfile.ZipFile(portable, "w", compression=zipfile.ZIP_DEFLATED) as archive:
         archive.write(output, output.name, compress_type=zipfile.ZIP_STORED)
         archive.write(output.with_suffix(".exe.sha256"), output.name + ".sha256")
-        archive.write(ROOT / "README-Windows.txt", "LEGGIMI.txt")
+        archive.write(ROOT / "README-Windows.txt", "README.txt")
+        archive.write(ROOT / "README-Windows.it.txt", "LEGGIMI.txt")
     print(f"Installer: {output}\nDimensione: {output.stat().st_size / 1024 / 1024:.1f} MiB\nSHA-256: {checksum}\nPacchetto: {portable}")
     return 0
 

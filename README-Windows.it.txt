@@ -3,6 +3,8 @@ Video SCORM / H5P 0.3.0 - Windows 10/11 a 64 bit
 English: README-Windows.txt
 
 INSTALLAZIONE
+Scarica l'installer da:
+https://github.com/kaffeine1/videoscorm/releases/tag/v0.3.0
 VideoSCORM-0.3.0-Windows.zip contiene l'installer del programma.
 Non caricarlo in Moodle: non è una lezione.
 Estrai prima questo archivio sul computer Windows.

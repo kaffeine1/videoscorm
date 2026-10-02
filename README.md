@@ -5,6 +5,8 @@ Videos are copied without re-encoding or changing the originals.
 
 [Italiano](README.it.md) | Windows: [English](README-Windows.txt) / [Italiano](README-Windows.it.txt)
 
+Windows 10/11 x64: [download the installer](https://github.com/kaffeine1/videoscorm/releases/tag/v0.3.0).
+
 ## Quick Start
 
 Install Python 3 with Tkinter and FFmpeg (`ffprobe`), then run:
@@ -58,11 +60,11 @@ python3 build_installer.py
 ```
 
 The build uses pinned, checksum-verified dependencies and writes to `dist/`.
-Installers, videos and generated packages are not stored in this repository.
+Installers are available as release assets. Videos and generated packages are not tracked in Git.
 See the Windows instructions for installation and diagnostics.
 
 ```bash
-python -m unittest test_builder.py test_batch.py test_h5p.py
+python -m unittest test_builder.py test_batch.py test_h5p.py test_installer.py
 node test_player.cjs
 node test_h5p_player.cjs
 ```
